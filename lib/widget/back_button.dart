@@ -9,7 +9,7 @@ class BackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: CircleAvatar(backgroundColor: Colors.black54,
+      child: CircleAvatar(backgroundColor: const Color.fromARGB(137, 57, 56, 56),
         radius: 25,
         child: IconButton(
             onPressed: () {

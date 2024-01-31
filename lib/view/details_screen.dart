@@ -6,6 +6,7 @@ import 'package:movie/constants/constants.dart';
 import 'package:movie/model/cast_model.dart';
 import 'package:movie/model/model.dart';
 import 'package:movie/service/api.dart';
+import 'package:movie/widget/back_button.dart';
 
 // ignore: must_be_immutable
 class DetailsScreen extends StatelessWidget {
@@ -18,7 +19,7 @@ class DetailsScreen extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(slivers: [
         SliverAppBar.large(
-           leading: BackButton(),
+           leading: BackButtons(),
           expandedHeight: 500,
           pinned: true,
           floating: true,

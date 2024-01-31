@@ -8,7 +8,7 @@ class SearchProvider extends ChangeNotifier {
   List<MovieModel> searchedResult = [];
   final ApiServices apiServices = ApiServices();
 
-  void searchMovies(String query) async {
+ Future <void> searchMovies(String query) async {
     if (query.isNotEmpty) {
       try {
         final searchUrl =
@@ -19,7 +19,6 @@ class SearchProvider extends ChangeNotifier {
         searchedResult = movies;
         notifyListeners();
       } catch (e) {
-        // print("Error: $e");
         Exception(e);
         notifyListeners();
       }

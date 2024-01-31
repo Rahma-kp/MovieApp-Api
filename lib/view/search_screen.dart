@@ -34,7 +34,7 @@ class SearchScreen extends StatelessWidget {
         child: Column(
           children: [
             TextFormField(
-              style: TextStyle(color: Colors.white),
+              style:const TextStyle(color: Colors.white),
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
@@ -42,7 +42,7 @@ class SearchScreen extends StatelessWidget {
                 fillColor: const Color.fromARGB(0, 255, 255, 255),
                 filled: true,
                 hintText: "Search...",
-                hintStyle: TextStyle(color: Colors.white),
+                hintStyle: const TextStyle(color: Colors.white),
               ),
               onChanged: (value) {
                 searchProvider.searchMovies(value);
