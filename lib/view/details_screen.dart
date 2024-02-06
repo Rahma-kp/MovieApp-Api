@@ -82,7 +82,6 @@ class DetailsScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    // SizedBox(width: 8),
                     Container(
                       padding: EdgeInsets.all(8),
                       decoration: BoxDecoration(

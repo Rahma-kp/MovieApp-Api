@@ -5,6 +5,7 @@ import 'package:movie/model/model.dart';
 import 'package:movie/view/details_screen.dart';
 
 
+// ignore: must_be_immutable
 class ListItem extends StatelessWidget {
   ListItem({super.key, required this.snapshot});
   AsyncSnapshot snapshot;
@@ -31,10 +32,9 @@ class ListItem extends StatelessWidget {
                                 movie: snapshot.data[index]),
                           ));
                     },
-                    child: Container(
+                    child: SizedBox(
                       height: 100,
                       width: 100,
-                      color: Colors.amber,
                       child: Image.network(
                           '${ApiConstants.imagePath}${snapshot.data![index].posterPath}',
                           fit: BoxFit.cover,
