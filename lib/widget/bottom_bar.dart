@@ -17,11 +17,13 @@ class BottomNavigation extends StatelessWidget {
     TvShowScreen()
   ];
 
+   BottomNavigation({super.key});
+
   @override
   Widget build(BuildContext context) {
     final bottomProvider = Provider.of<BottomBarProvider>(context);
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 0, 0, 0),
+      backgroundColor:const Color.fromARGB(255, 0, 0, 0),
       body: _pages[bottomProvider.currentIndex],
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -29,7 +31,7 @@ class BottomNavigation extends StatelessWidget {
           borderRadius: BorderRadius.circular(20.0),
           child: Container(
             child: NavigationBar(
-              backgroundColor: Color.fromARGB(255, 0, 0, 0),
+              backgroundColor:const Color.fromARGB(255, 0, 0, 0),
               selectedIndex: bottomProvider.currentIndex,
               onDestinationSelected: (index) {
                 bottomProvider.navigatePage(index);
@@ -39,7 +41,7 @@ class BottomNavigation extends StatelessWidget {
                   icon: Icon(Icons.home,
                       color: bottomProvider.currentIndex == 0
                           ? Colors.white
-                          : Color.fromARGB(255, 106, 105, 105)),
+                          :const Color.fromARGB(255, 106, 105, 105)),
                   label: 'Home',
                 ),
                 NavigationDestination(
@@ -47,7 +49,7 @@ class BottomNavigation extends StatelessWidget {
                       size: 30,
                       color: bottomProvider.currentIndex == 1
                           ? Colors.white
-                          : Color.fromARGB(255, 106, 105, 105)),
+                          :const Color.fromARGB(255, 106, 105, 105)),
                   label: 'Search',
                 ),
                 NavigationDestination(
@@ -66,8 +68,8 @@ class BottomNavigation extends StatelessWidget {
                   label: 'TV',
                 ),
               ],
-              indicatorColor: Color.fromARGB(255, 33, 143, 149),
-              surfaceTintColor: Color.fromARGB(255, 4, 2, 17),
+              indicatorColor:const Color.fromARGB(255, 33, 143, 149),
+              surfaceTintColor:const Color.fromARGB(255, 4, 2, 17),
             ),
           ),
         ),

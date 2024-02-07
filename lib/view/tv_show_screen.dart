@@ -13,7 +13,7 @@ class TvShowScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = Provider.of<HomeProvider>(context);
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        backgroundColor:const Color.fromARGB(255, 0, 0, 0),
         
         appBar: AppBar(
           automaticallyImplyLeading: false,
@@ -32,10 +32,8 @@ class TvShowScreen extends StatelessWidget {
           ),
         ),
         body: Stack(children: [
-          // const AllContainer(),
           SingleChildScrollView(
             child: SizedBox(
-              // MovieSlider(),
               child: Column(
                 children: [
                   const SizedBox(
@@ -60,7 +58,6 @@ class TvShowScreen extends StatelessWidget {
                           child: Text(snapshot.error.toString()),
                         );
                       } else if (snapshot.hasData) {
-                        // final data = snapshot.data;
                         return MoviesSlider(snapshot: snapshot);
                       } else {
                         return const Center(
@@ -89,7 +86,6 @@ class TvShowScreen extends StatelessWidget {
                           child: Text(snapshot.error.toString()),
                         );
                       } else if (snapshot.hasData) {
-                        // final data = snapshot.data;
                         return MoviesSlider(snapshot: snapshot);
                       } else {
                         return const Center(
@@ -118,7 +114,6 @@ class TvShowScreen extends StatelessWidget {
                           child: Text(snapshot.error.toString()),
                         );
                       } else if (snapshot.hasData) {
-                        // final data = snapshot.data;
                         return MoviesSlider(snapshot: snapshot);
                       } else {
                         return const Center(

@@ -3,7 +3,6 @@ import 'package:movie/contoller/bottombar_provider.dart';
 import 'package:movie/contoller/home_provider.dart';
 import 'package:movie/contoller/search_provider.dart';
 import 'package:movie/widget/bottom_bar.dart';
-
 import 'package:provider/provider.dart';
 
 void main() {
